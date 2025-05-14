@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Naufal Iksham | Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/tailwind_config.js"></script>
+</head>
+<body class="bg-gradient-to-br from-gray-100 to-gray-300 dark:from-darkGreen-900 dark:to-darkGreen-800 min-h-screen flex items-center justify-center px-4 transition-all duration-300">
+
+  <div class="m-[2%] bg-white/30 dark:bg-darkGreen-700/30 backdrop-blur-md border border-gray-300 dark:border-darkGreen-600 rounded-2xl shadow-xl max-w-sm w-full p-6 flex flex-col items-center transition-all">
+    
+    <img src="assets/user.jpg" alt="Profile" class="w-28 h-28 rounded-full shadow-lg border-4 border-white dark:border-darkGreen-900 mb-4">
+    
+    <h1 class="text-2xl font-bold text-gray-800 dark:text-white text-center">Naufal Iksham</h1>
+    <p class="text-sm text-gray-600 dark:text-gray-300 mb-6 text-center">Full Stack Web Developer | Back-End Developer Enthusiast</p>
+
+    <div class="w-full flex flex-col gap-3">
+      <a href="https://www.linkedin.com/in/naufaliksham19" target="_blank"
+        class="bg-primary hover:bg-blue-600 dark:bg-darkGreen-950 dark:hover:bg-darkGreen-900 text-white py-3 rounded-xl text-center font-medium hover:shadow-lg transition shadow-xl">
+        💼 LinkedIn
+      </a>
+      <a href="https://github.com/naufaliksham?tab=repositories"
+        class="bg-white text-gray-800 py-3 rounded-xl text-center font-medium hover:bg-gray-100 dark:bg-darkGreen-700 dark:text-white shadow-lg hover:shadow-xl dark:hover:bg-darkGreen-600 transition shadow-md">
+        🌐 GitHub
+      </a>
+      <a href="#" target="_blank" id="website"
+        class="bg-white text-gray-800 py-3 rounded-xl text-center font-medium hover:bg-gray-100 dark:bg-darkGreen-700 dark:text-white shadow-lg hover:shadow-xl dark:hover:bg-darkGreen-600 transition shadow-md">
+        🖥 Portfolio Website
+      </a>
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=naufal.iksham@gmail.com" target="_blank" rel="noopener noreferrer"
+        class="bg-white text-gray-800 py-3 rounded-xl text-center font-medium hover:bg-gray-100 dark:bg-darkGreen-700 dark:text-white shadow-lg hover:shadow-xl dark:hover:bg-darkGreen-600 transition shadow-md">
+        📧 Email Me via Gmail
+      </a>
+      <a href="https://wa.me/6282243090750" target="_blank"
+        class="flex items-center justify-center gap-2 bg-white text-gray-800 py-3 rounded-xl font-medium hover:bg-gray-100 dark:bg-darkGreen-700 dark:text-white shadow-lg hover:shadow-xl dark:hover:bg-darkGreen-600 transition shadow-md">
+        <img src="assets/whatsapp.png" alt="WhatsApp" class="w-5 h-5" />
+        WhatsApp
+      </a>
+    </div>
+    <button id="darkToggle" class="mt-6 text-sm px-4 py-2 shadow-md hover:shadow-xl font-medium rounded-full bg-gray-300 dark:bg-darkGreen-700 hover:bg-darkGreen-900 dark:hover:bg-darkGreen-900 hover:text-gray-300 dark:text-white text-green-900 transition flex items-center gap-2">
+      🌓 <span></span>
+    </button>
+  </div>
+
+  <script>
+    const toggle = document.getElementById('darkToggle');
+    const toggleText = toggle.querySelector('span');
+  
+    function updateToggleText() {
+      if (document.documentElement.classList.contains('dark')) {
+        toggleText.textContent = 'Change to Bright Mode';
+      } else {
+        toggleText.textContent = 'Change to Green Mode';
+      }
+    }
+  
+    toggle.addEventListener('click', () => {
+      document.documentElement.classList.toggle('dark');
+      updateToggleText();
+    });
+  
+    updateToggleText();
+  </script>
+  
+  <!-- portofolio website sedang dalam perbaikan -->
+  <script>
+    const websiteButton = document.getElementById('website');
+    websiteButton.addEventListener('click', (event) => {
+      event.preventDefault();
+      alert('Website sedang dalam perbaikan, mohon bersabar.');
+    });
+  </script>
+</body>
+</html>
